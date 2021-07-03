@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+  	box-sizing: border-box;
+  	margin: auto;
+}
+
+body {
+    text-shadow: 0 0 1px #000, 0 0 2px #000;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: {font_size};
+    line-height: 1.5em;
+    color: {text_color};
+  	height: 100%;
+}
+
+#log>div {
+    animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+
+.colon {
+    display: none;
+}
+
+#log {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-end;
+}
+
+#log>div {
+    /*background-color: #00000050;*/
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.4em 0.2em;
+    position: relative;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+    vertical-align: top;
+    padding-bottom: 0.1em;
+}
+
+#log .meta {
+    width: 35%;
+    text-align: right;
+    padding-right: 0.5em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+#log .message {
+  	display: block;
+    word-wrap: break-word;
+    width: 65%;
+  	padding-left: 1em;
+}
+
+.badge {
+    display: inline-block;
+    margin-right: 0.2em;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+    top: -0.1em;
+}
+
+.name {
+    margin-left: 0.2em;
+}
+
+.text-drop {
+    background: #00000050;
+    padding: 0.3em;
+    padding-top: 2.3em;
+    margin: 0.5em;
+    border-radius: 0px 25px 25px;
+    box-sizing: content-box;
+}
+
+.user-drop {
+    position: absolute;
+    margin: -0.5em;
+    margin-top: -2.5em;
+    padding: 0.5em;
+    background: #eee;
+    border-radius: 0px 25px 25px;
+}
