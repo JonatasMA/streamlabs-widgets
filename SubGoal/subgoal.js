@@ -9,16 +9,16 @@ document.addEventListener('goalLoad', function (obj) {
     $('#goal-current').text(obj.detail.amount.current);
     $('#goal-total').text(obj.detail.amount.target);
     $('#goal-end-date').text(obj.detail.to_go.ends_at);
-    teste = (100 / obj.detail.amount.target) * obj.detail.amount.current;
-    document.getElementById('goal-percent').innerText = teste;
-    document.getElementById('goal-bar').style.width = `${teste}%`;
+    const goalPercent = ((100 / obj.detail.amount.target) * obj.detail.amount.current).toFixed(0);
+    document.getElementById('goal-percent').innerText = goalPercent;
+    document.getElementById('goal-bar').style.width = `${goalPercent}%`;
 });
 
 document.addEventListener('goalEvent', function (obj) {
     // obj.detail will contain information about the goal
     console.log(obj.detail);
     $('#goal-current').text(obj.detail.amount.current);
-    teste = (100 / obj.detail.amount.target) * obj.detail.amount.current;
-    document.getElementById('goal-percent').innerText = teste;
-    document.getElementById('goal-bar').style.width = `${teste}%`;
+    const goalPercent = ((100 / obj.detail.amount.target) * obj.detail.amount.current).toFixed(0);
+    document.getElementById('goal-percent').innerText = goalPercent;
+    document.getElementById('goal-bar').style.width = `${goalPercent}%`;
 });
