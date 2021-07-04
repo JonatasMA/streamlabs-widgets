@@ -1,5 +1,5 @@
 # Streamlabs Custom Widgets
-Some widgets of streamlabs plataform mado for the [Jhouwzzz](https://twitch.tv/jhouwzzz)'s stream
+Some widgets of streamlabs plataform made for the [Jhouwzzz](https://twitch.tv/jhouwzzz)'s stream
 
 ## Chat
 ![Chat](/Assets/chat.png)
